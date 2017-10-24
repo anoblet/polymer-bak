@@ -13,8 +13,6 @@
 <link rel="import" href="../bower_components/paper-input/paper-input.html">
 <link rel="import" href="../bower_components/paper-button/paper-button.html">
 <link rel="import" href="../bower_components/paper-card/paper-card.html">
-
-<link rel="import" href="MyStyles.html">
 <link rel="import" href="my-icons.html">
 
 <link rel="lazy-import" href="home.html">
@@ -23,10 +21,10 @@
 
 <dom-module id="my-app">
     <template>
-        <style include="MyStyles">
+        <style>
             :host {
-                --app-primary-color: #f48b23;
-                --app-secondary-color: #6e92f4;
+                --app-primary-color: #4285f4;
+                --app-secondary-color: black;
 
                 display: block;
             }
@@ -60,12 +58,6 @@
                 color: black;
                 font-weight: bold;
             }
-            app-drawer {
-                top: -58px;
-            }
-            #contentContainer {
-                padding: 0 !important;
-            }
         </style>
 
         <app-location
@@ -80,14 +72,15 @@
                 tail="{{subroute}}">
         </app-route>
 
-        <app-header-layout>
-            <app-header slot="header" fixed shadow>
+        <app-header-layout has-scrolling-region>
+
+            <app-header slot="header" fixed shadow effects="waterfall">
                 <app-toolbar>
-                    <paper-icon-button on-tap="_toggleDrawer" icon="my-icons:menu" drawer-toggle></paper-icon-button>
+                    <paper-icon-button icon="my-icons:menu" drawer-toggle></paper-icon-button>
                     <div main-title>Andy Noblet</div>
                 </app-toolbar>
             </app-header>
-            <app-drawer-layout id="drawerLayout" fullbleed narrow="{{narrow}}" force-narrow>
+            <app-drawer-layout fullbleed narrow="{{narrow}}">
                 <app-drawer id="drawer" slot="drawer" swipe-open="[[narrow]]">
                     <app-toolbar>Menu</app-toolbar>
                     <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
@@ -152,13 +145,6 @@
 
             _showPage404() {
                 this.page = 'view404';
-            }
-
-            _toggleDrawer() {
-                var drawer = this.$.drawer;
-                if (drawer && !drawer.persistent) {
-                    drawer.toggle();
-                }
             }
         }
 

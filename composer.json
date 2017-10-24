@@ -1,0 +1,12 @@
+{
+    "name": "anoblet/polymer",
+    "authors": [
+        {
+            "name": "Andy Noblet",
+            "email": "andrewbnoblet@gmail.com"
+        }
+    ],
+    "require": {
+        "twbs/bootstrap": "4.0.0-beta.2"
+    }
+}
