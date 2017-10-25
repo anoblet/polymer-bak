@@ -24,13 +24,13 @@
 <dom-module id="my-app">
     <template>
         <style include="MyStyles">
+
             :host {
-                --app-primary-color: #4285f4;
+                --app-primary-color: var(--paper-light-blue-a700);
                 --app-secondary-color: #6e92f4;
 
                 display: block;
             }
-
             app-drawer-layout:not([narrow]) [drawer-toggle] {
                 display: none;
             }
@@ -39,7 +39,7 @@
                 color: #fff;
                 background-color: var(--app-primary-color);
             }
-
+            /*
             app-header paper-icon-button {
                 --paper-icon-button-ink-color: white;
             }
@@ -66,6 +66,7 @@
             #contentContainer {
                 padding: 0 !important;
             }
+            */
         </style>
 
         <app-location

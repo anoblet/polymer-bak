@@ -9,10 +9,18 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 -->
 
 <link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../bower_components/paper-styles/paper-styles.html">
 
 <dom-module id="MyStyles">
     <template>
         <style>
+            :host {
+                --app-primary-color: #4285f4;
+                --app-secondary-color: #6e92f4;
+
+                display: block;
+            }
+
             .flex {
                 display: flex !important;
             }
@@ -33,11 +41,32 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                 margin: auto !important;
             }
 
+            .align-right {
+                text-align: right;
+                align-items: center;
+            }
+            .flex-left {
+                justify-content: flex-start;
+            }
+            .flex-right {
+                justify-content: flex-end;
+            }
+
+            .justify-content {
+                justify-content: center;
+                align-items: center;
+            }
+
             my-app {
                 height: 100vh;
             }
+
             app-header-layout {
                 height: 100%;
+            }
+
+            app-header {
+                height: 56px;
             }
 
             app-drawer-layout {
@@ -46,20 +75,53 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             }
 
             iron-pages {
-                background: #303030;
-                height: 100%
+                background: #f2f2f2;
+                min-height: 100vh;
+                padding: 1em;
             }
 
             paper-button {
                 background-color: var(--app-primary-color);
+                color: #fff;
             }
 
             paper-card {
-                background: #424242;
+                background: #fff;
+            }
+
+            .horizontal {
+                @apply --layout-horizontal;
+            }
+            .flex {
+                @apply --layout-flex;
+            }
+            .justified {
+                @apply --layout-justified;
             }
 
             #contentContainer {
                 padding: 0 !important;
+            }
+
+            .drawer-list {
+                margin: 0 20px;
+            }
+
+            .drawer-list a {
+                display: block;
+                padding: 0 16px;
+                text-decoration: none;
+                color: var(--app-secondary-color);
+                line-height: 40px;
+            }
+
+            .drawer-list a.iron-selected {
+                color: #303030;
+                font
+                -weight: bold;
+            }
+            h1 {
+                font-weight: normal;
             }
         </style>
     </template>
