@@ -1,10 +1,10 @@
 {
   "entrypoint": "index.html",
-  "shell": "src/my-app.html",
+  "shell": "src/App.html",
   "fragments": [
-    "src/home.html",
-    "src/login.html",
-    "src/my-view404.html"
+    "src/CMS/Home.html",
+    "src/Login.html",
+    "src/CMS/NotFound.html"
   ],
   "sources": [
     "src/**/*",

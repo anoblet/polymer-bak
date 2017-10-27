@@ -22,7 +22,8 @@
 <link rel="lazy-import" href="CMS/NotFound.html">
 <link rel="import" href="Copyright.html">
 
-<link rel="import" href="../bower_components/google-signin-aware.html">
+<link rel="import" href="../bower_components/google-signin/google-signin.html">
+<link rel="import" href="../bower_components/google-signin/google-signin-aware.html">
 
 
 <dom-module id="my-app">
@@ -61,8 +62,17 @@
         <app-header-layout>
             <app-header slot="header" fixed shadow>
                 <app-toolbar>
-                    <paper-icon-button on-tap="_toggleDrawer" icon="my-icons:menu" drawer-toggle></paper-icon-button>
-                    <div main-title>Andy Noblet</div>
+                    <div class="container-fluid">
+                        <div class="row justify-content-between align-items-center">
+                            <div class="col">
+                                <paper-icon-button on-tap="_toggleDrawer" icon="my-icons:menu" drawer-toggle></paper-icon-button>
+                                <span>Andy</span>
+                            </div>
+                            <div class="col text-right">
+                                <google-signin brand="google" width="wide" client-id="1007906209983-nbu0r39n694tlahr51mck2el5gdvtv0k.apps.googleusercontent.com"></google-signin>
+                            </div>
+                        </div>
+                    </div>
                 </app-toolbar>
             </app-header>
             <app-drawer-layout id="drawerLayout" fullbleed narrow="{{narrow}}" force-narrow>
