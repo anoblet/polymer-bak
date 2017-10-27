@@ -11,7 +11,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../bower_components/polymer/polymer-element.html">
 <link rel="import" href="Style.html">
 
-<dom-module id="my-login">
+<dom-module id="my-copyright">
     <template>
         <style include="MyStyles">
             :host {
@@ -21,29 +21,16 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             }
         </style>
 
-        <paper-card class="flex w-50 m-auto">
-            <div class="card-content w-100"><h1>Login</h1>
-                <paper-input type="email" label="Email"></paper-input>
-                <paper-input type="password" label="Password"></paper-input>
-                <div class="card-actions">
-                    <div class="flex flex-right">
-                        <paper-button raised class="indigo">Login</paper-button>
-                    </div>
-                    <div class="flex-left">
-                        Don't have an account/ <a href="/register">Register</a>
-                    </div>
-                </div>
-            </div>
-        </paper-card>
+        <span class="flex text-center">Copyrighted &copy; Andy Noblet.</span>
     </template>
 
     <script>
-        class MyLogin extends Polymer.Element {
+        class MyCopyright extends Polymer.Element {
             static get is() {
-                return 'my-login';
+                return 'my-copyright';
             }
         }
 
-        window.customElements.define(MyLogin.is, MyLogin);
+        window.customElements.define(MyCopyright.is, MyCopyright);
     </script>
 </dom-module>
