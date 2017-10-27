@@ -19,18 +19,18 @@
 
 <link rel="lazy-import" href="Home.html">
 <link rel="lazy-import" href="Login.html">
-<link rel="lazy-import" href="404.html">
+<link rel="lazy-import" href="NotFound.html">
 
 <dom-module id="my-app">
     <template>
         <style include="MyStyles">
-
             :host {
                 --app-primary-color: var(--paper-light-blue-a700);
                 --app-secondary-color: #6e92f4;
 
                 display: block;
             }
+
             app-drawer-layout:not([narrow]) [drawer-toggle] {
                 display: none;
             }
@@ -39,34 +39,6 @@
                 color: #fff;
                 background-color: var(--app-primary-color);
             }
-            /*
-            app-header paper-icon-button {
-                --paper-icon-button-ink-color: white;
-            }
-
-            .drawer-list {
-                margin: 0 20px;
-            }
-
-            .drawer-list a {
-                display: block;
-                padding: 0 16px;
-                text-decoration: none;
-                color: var(--app-secondary-color);
-                line-height: 40px;
-            }
-
-            .drawer-list a.iron-selected {
-                color: black;
-                font-weight: bold;
-            }
-            app-drawer {
-                top: -58px;
-            }
-            #contentContainer {
-                padding: 0 !important;
-            }
-            */
         </style>
 
         <app-location
@@ -99,11 +71,11 @@
                 <iron-pages
                         selected="[[page]]"
                         attr-for-selected="name"
-                        fallback-selection="view404"
+                        fallback-selection="404"
                         role="main">
                     <my-home name="home"></my-home>
                     <my-login name="login"></my-login>
-                    <my-view404 name="view404"></my-view404>
+                    <my-view404 name="NotFound"></my-view404>
                 </iron-pages>
             </app-drawer-layout>
         </app-header-layout>
@@ -152,7 +124,7 @@
             }
 
             _showPage404() {
-                this.page = 'view404';
+                this.page = 'NotFound';
             }
 
             _toggleDrawer() {
