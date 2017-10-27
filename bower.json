@@ -19,7 +19,10 @@
     "paper-button": "^2.0.0",
     "paper-card": "PolymerElements/paper-card#^2.0.0",
     "polymerfire": "firebase/polymerfire#^2.2.1",
-    "iron-form": "PolymerElements/iron-form#^2.0.1"
+    "iron-form": "PolymerElements/iron-form#^2.0.1",
+    "google-signin": "GoogleWebComponents/google-signin#^2.0.0",
+    "granite-bootstrap": "LostInBrittany/granite-bootstrap#^3.3.7-5",
+    "bootstrap": "v4.0.0-beta"
   },
   "resolutions": {
     "polymer": "^2.0.0"

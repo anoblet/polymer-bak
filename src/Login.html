@@ -11,8 +11,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../bower_components/polymer/polymer-element.html">
 <link rel="import" href="Style.html">
 
+<link rel="import" href="../bower_components/google-signin/google-signin.html">
+
+
 <dom-module id="my-login">
     <template>
+        <link rel="stylesheet" href="../vendor/twbs/bootstrap/dist/css/bootstrap.css">
         <style include="MyStyles">
             :host {
                 display: block;
@@ -21,13 +25,16 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             }
         </style>
 
-        <paper-card class="flex w-50 m-auto">
+        <paper-card class="flex w-50 m-auto p-3">
             <div class="card-content w-100"><h1>Login</h1>
                 <paper-input type="email" label="Email"></paper-input>
                 <paper-input type="password" label="Password"></paper-input>
                 <div class="card-actions">
                     <div class="flex flex-right">
                         <paper-button raised class="indigo">Login</paper-button>
+                    </div>
+                    <div class="p-1">
+                        <google-signin brand="google" width="wide" client-id = "1007906209983-nbu0r39n694tlahr51mck2el5gdvtv0k.apps.googleusercontent.com"></google-signin>
                     </div>
                     <div class="flex-left">
                         Don't have an account/ <a href="/register">Register</a>
