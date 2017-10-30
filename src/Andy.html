@@ -28,7 +28,6 @@
 <link rel="import" href="../bower_components/google-signin/google-signin.html">
 <link rel="import" href="../bower_components/google-signin/google-signin-aware.html">
 
-
 <dom-module id="my-app">
     <template>
         <link rel="stylesheet" href="../vendor/twbs/bootstrap/dist/css/bootstrap.css">
@@ -82,7 +81,7 @@
                 <app-drawer id="drawer" slot="drawer" swipe-open="[[narrow]]">
                     <app-toolbar>Menu</app-toolbar>
                     <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
-                        <a name="home" href="/">Home</a>
+                        <a name="CMS/Home" href="/">Home</a>
                         <a name="login" href="/login">Login</a>
                     </iron-selector>
                 </app-drawer>
@@ -93,7 +92,7 @@
                         role="main">
                     <my-home name="CMS/Home"></my-home>
                     <my-login name="login"></my-login>
-                    <my-view404 name="NotFound"></my-view404>
+                    <my-notfound name="NotFound"></my-notfound>
                 </iron-pages>
                 <my-copyright></my-copyright>
             </app-drawer-layout>
